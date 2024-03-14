@@ -34,7 +34,7 @@ const usersDatabase = [
       timeline: "Yo hoy no quiero trabajar",
     },
   ];
-
+function login(usuario,clave){
 let user= prompt('Ingresa tu Usuario');
 let pass=prompt('Ingresa tu contraseña')
  
@@ -47,7 +47,7 @@ if(buscarUsuario == undefined){
   console.log(`El usuario no existe`)
 }
 else if(user == buscarUsuario.username ){
-  console.log(`El usuario existe`)
+  console.log(`Bienvenid@ ${buscarUsuario.username}`)
 
 if(pass == buscarUsuario.password){
   console.log(`la contraseña es correcta`)
@@ -55,4 +55,7 @@ if(pass == buscarUsuario.password){
   console.log(`la contraseña es incorrecta`)
 }
 }
+}
 
+
+login();
